@@ -4,7 +4,9 @@
 
 ### Demo
 
-See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG).
+See the [jquery.msb.js demo exemples](https://codepen.io/fchaussin/pen/vejWKG).
+
+Another [demo inside a ajax form](https://codepen.io/fchaussin/pen/vejWKG)
 
 ### Features
 
