@@ -11,6 +11,7 @@ See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG).
 - 5 (customizable) defaults states (default, success, error, warning, process)
 - Add your custom states
 - Update the button state
+- Animate icons
 - Compatible with MaterializeCSS icons (for now)
 - Automatically add *.msb* CSS class after init 
 - Status Bar comming soon...
