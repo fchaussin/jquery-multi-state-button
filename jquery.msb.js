@@ -62,7 +62,7 @@ $.fn.msb = function(methodOrOptions) {
 };
 $.fn.msb.defaults = {
 	"default": {
-		"cssClass": "waves-effect waves-light blue",
+		"cssClass": "blue",
 		"label": "submit",
 		"icon": {
 			"name": "send", 
@@ -102,7 +102,7 @@ $.fn.msb.defaults = {
 		"stateBar": ""
 	},
 	"process": {
-		"cssClass": "yellow purple-text text-darken-2",
+		"cssClass": "yellow black-text",
 		"label": "procesing",
 		"icon": {
 			"name": "refresh",
