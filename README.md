@@ -50,7 +50,7 @@ Update button state
 
 	$('a.msb').first().msb('update','success');
 	$('button#submit)').msb('update','customState');	
-*Be careful to use the proper DOM selector you have several .msb buttons in your document.*
+*Be careful to use the proper DOM selector if you have several .msb buttons in your document.*
 
 HTML
 
