@@ -25,37 +25,10 @@ See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG).
 
 ### Usage
 
-Default init
-
-	$(function() {
-		$('.btn').msb(options);
-	});
-*Where `options` is an optional parameter.*
-
-Custom state init
-
-	$('.btn').msb({
-		"customState": {
-			"cssClass": "waves-effect waves-light blue",
-			"label": "custom state",
-			"icon": {
-				"name": "help", 
-				"animClass": false
-			},
-			"disabled": false,
-			"stateBar": ""
-		}
-	});
-
-Update button state
-
-	$('a.msb').first().msb('update','success');
-	$('button#submit)').msb('update','customState');	
-*Be careful to use the proper DOM selector if you have several .msb buttons in your document.*
 
 HTML
 
-	<a class="btn" data-state="warning">
+	<a class="btnwaves-effect waves-light" data-state="warning">
 		<i class="material-icons right">cloud</i>
 		button label
 	</a>
@@ -66,10 +39,58 @@ HTML
 	<a class="btn" data-state="process">
 		button without icon
 	</a>
-	<button class="btn" data-state="default">
+	<button class="btn waves-effect waves-light" data-state="default">
 		<i class="material-icons left">cloud</i>
 		button
 	</button>
+Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state should be used during the init. 
+Try to be as minimal as you can with your classes to avoid any collision. It's not recommanded to assign color class at this point, use `Custom state` or `Default state overriding` for that.
+
+Default init
+
+	$(function() {
+		$('.btn').msb(options);
+	});
+*Where `options` is an optional parameter.*
+Once initialized, the button's label and icon are updated by the plugin. The initial button's classes are kept.
+
+Custom state init
+
+	$('.custom').msb({
+		"customState": {
+			"cssClass": "waves-effect waves-light pink",
+			"label": "custom state",
+			"icon": {
+				"name": "help", 
+				"animClass": false
+			},
+			"disabled": false,
+			"stateBar": ""
+		}
+	});
+
+Default state override init
+
+	$('.override').msb({
+		"success": {
+			"cssClass": "lime black-text",
+			"label": "custom state",
+			"icon": {
+				"name": "thumb_up", 
+				"animClass": "bounce"
+			},
+			"disabled": true,
+			"stateBar": ""
+		}
+	});
+
+Update button state
+
+	$('a.msb').first().msb('update','success');
+	$('button#submit)').msb('update','customState');	
+*Be careful to use the proper DOM selector if you have several .msb buttons in your document.*
+Initial class of the button are kept (such as *btn, waves-effect, waves-light...*).
+More exemples in the [demo](https://codepen.io/fchaussin/pen/vejWKG).
 
 ### Options
 
@@ -137,10 +158,4 @@ Where:
 - `disabled` is `true` or `false` to set or not the `disabled attribute` to the `<button> markup`, this will override your `cssClass` colors as MaterializeCSS do with `disabled elements`. `Disabled` is not working on a `<a> markup` so it will apply the `.msb` defined colors.
 - `stateBar` is a CSS class to style the state bar, if empty, *cssClass* value will be used instead
 
-### Data API
-
-Use the data attribute `data-state="stateName"` where `stateName` is an arbitrary string to identify which state should be used during the init.
-
-	<a class="btn" data-state="default"><i class="material-icons">send</i>My label</a>
-	<button data-state="success">Another label</button>
 
