@@ -10,4 +10,14 @@
   100% {
     transform: rotate(360deg);
   }
-} 
+}
+.msb-anim-bounce {
+  position: relative;
+  animation: bouncing .5s infinite ease;
+}
+@keyframes bouncing {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    80% { top: -0.3em; }
+    100% { top: 0; }
+}
