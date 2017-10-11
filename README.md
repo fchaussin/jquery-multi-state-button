@@ -16,7 +16,7 @@ Another [demo with a ajax form](https://codepen.io/fchaussin/pen/vejWKG)
 - Animate icons
 - Compatible with MaterializeCSS icons (for now)
 - Automatically add *.msb* CSS class after init 
-- Status Bar comming soon...
+- Status Bar comming soon... (like in this [pen](https://codepen.io/fchaussin/pen/aLYmxG))
 
 ### Install
 
