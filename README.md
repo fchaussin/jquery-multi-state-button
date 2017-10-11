@@ -53,78 +53,79 @@ Update button state
 *Be careful to use the proper DOM selector you have several .msb buttons in your document.*
 
 HTML
-  <a class="btn" data-state="warning">
-    <i class="material-icons right">cloud</i>
-    button
-  </a>
-  <a class="btn" data-state="error">
-    <i class="material-icons left">cloud</i>
-    button
-  </a>
-  <a class="btn" data-state="process">
-    button without icon
-  </a>
-  <button class="btn" data-state="default">
-    <i class="material-icons left">cloud</i>
-    button
-  </button>
+
+	<a class="btn" data-state="warning">
+		<i class="material-icons right">cloud</i>
+		button label
+	</a>
+	<a class="btn" data-state="error">
+		<i class="material-icons left">cloud</i>
+		button
+	</a>
+	<a class="btn" data-state="process">
+		button without icon
+	</a>
+	<button class="btn" data-state="default">
+		<i class="material-icons left">cloud</i>
+		button
+	</button>
 
 ### Options
 
 The default `options` are:
 
-  {
-    "default": {
-      "cssClass": "waves-effect waves-light blue",
-      "label": "submit",
-      "icon": {
-        "name": "send", 
-        "animClass": false
-      },
-      "disabled": false,
-      "stateBar": ""
-    },
-    "success": {
-      "cssClass": "green",
-      "label": "sent",
-      "icon": {
-        "name": "check",
-        "animClass": false
-      },
-      "disabled": true,
-      "stateBar": ""
-    },
-    "warning": {
-      "cssClass": "orange",
-      "label": "try again",
-      "icon": {
-        "name": "warning",
-        "animClass": false
-      },
-      "disabled": false,
-      "stateBar": ""
-    },
-    "error": {
-      "cssClass": "red",
-      "label": "try again",
-      "icon": {
-        "name": "cancel",
-        "animClass": false
-      },
-      "disabled": false,
-      "stateBar": ""
-    },
-    "process": {
-      "cssClass": "yellow purple-text text-darken-2",
-      "label": "procesing",
-      "icon": {
-        "name": "refresh",
-        "animClass": "rotate"
-      },
-      "disabled": true,
-      "stateBar": ""
-    }
-  }
+	  {
+	    "default": {
+	      "cssClass": "waves-effect waves-light blue",
+	      "label": "submit",
+	      "icon": {
+		"name": "send", 
+		"animClass": false
+	      },
+	      "disabled": false,
+	      "stateBar": ""
+	    },
+	    "success": {
+	      "cssClass": "green",
+	      "label": "sent",
+	      "icon": {
+		"name": "check",
+		"animClass": false
+	      },
+	      "disabled": true,
+	      "stateBar": ""
+	    },
+	    "warning": {
+	      "cssClass": "orange",
+	      "label": "try again",
+	      "icon": {
+		"name": "warning",
+		"animClass": false
+	      },
+	      "disabled": false,
+	      "stateBar": ""
+	    },
+	    "error": {
+	      "cssClass": "red",
+	      "label": "try again",
+	      "icon": {
+		"name": "cancel",
+		"animClass": false
+	      },
+	      "disabled": false,
+	      "stateBar": ""
+	    },
+	    "process": {
+	      "cssClass": "yellow purple-text text-darken-2",
+	      "label": "procesing",
+	      "icon": {
+		"name": "refresh",
+		"animClass": "rotate"
+	      },
+	      "disabled": true,
+	      "stateBar": ""
+	    }
+	  }
 
 Where:
 
@@ -139,6 +140,6 @@ Where:
 
 Use the data attribute `data-state="stateName"` where `stateName` is an arbitrary string to identify which state should be used during the init.
 
-	<a class="btn" data-state="default"><i class="material-icons">send</i>My label</div>
-	<button data-state="success">Another label</div>
+	<a class="btn" data-state="default"><i class="material-icons">send</i>My label</a>
+	<button data-state="success">Another label</button>
 
