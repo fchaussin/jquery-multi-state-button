@@ -117,7 +117,7 @@ The default `options` are:
 	    },
 	    "process": {
 	      "cssClass": "yellow black-text",
-	      "label": "procesing",
+	      "label": "processing",
 	      "icon": {
 		"name": "refresh",
 		"animClass": "rotate"
