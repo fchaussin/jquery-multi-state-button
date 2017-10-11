@@ -1,0 +1,13 @@
+/* jquery.msb animations classes */
+
+.msb-anim-rotate {
+  animation: msb-rotate 1s infinite linear;
+}
+@keyframes msb-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
