@@ -4,9 +4,9 @@
 
 ### Demo
 
-See the [jquery.msb.js demo exemples](https://codepen.io/fchaussin/pen/vejWKG).
+See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG) with very basic exemples.
 
-Another [demo with ajax submiting](https://codepen.io/fchaussin/pen/mBKjzO) states overriding, init callback, state updates, and updates callbacks...
+Another [demo](https://codepen.io/fchaussin/pen/mBKjzO) in a real life exemple with ajax submiting, states overriding, init callback, state updates, and updates callbacks...
 
 ### Features
 
