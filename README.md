@@ -69,8 +69,7 @@ Custom state init
 			"cssClass": "waves-effect waves-light pink",
 			"label": "custom state",
 			"icon": {
-				"name": "help", 
-				"animClass": false
+				"name": "help"
 			}
 		}
 	});
@@ -82,7 +81,13 @@ Default state override init
 			"cssClass": "lime black-text",
 			"icon": {
 				"name": "thumb_up", 
-				"animClass": "bounce"
+				"anim": "bounce"
+			}
+		},
+		"process": {
+			"icon": {
+				"name": "send", 
+				"anim": "fly"
 			}
 		}
 	});
@@ -105,7 +110,7 @@ The default `options` are:
 	      "label": "submit",
 	      "icon": {
 		"name": "send", 
-		"animClass": false
+		"anim": false
 	      },
 	      "disabled": false,
 	      "stateBar": ""
@@ -115,7 +120,7 @@ The default `options` are:
 	      "label": "sent",
 	      "icon": {
 		"name": "check",
-		"animClass": false
+		"anim": false
 	      },
 	      "disabled": true,
 	      "stateBar": ""
@@ -125,7 +130,7 @@ The default `options` are:
 	      "label": "try again",
 	      "icon": {
 		"name": "warning",
-		"animClass": false
+		"anim": false
 	      },
 	      "disabled": false,
 	      "stateBar": ""
@@ -135,7 +140,7 @@ The default `options` are:
 	      "label": "try again",
 	      "icon": {
 		"name": "cancel",
-		"animClass": false
+		"anim": false
 	      },
 	      "disabled": false,
 	      "stateBar": ""
@@ -145,7 +150,7 @@ The default `options` are:
 	      "label": "processing",
 	      "icon": {
 		"name": "refresh",
-		"animClass": "rotate"
+		"anim": "rotate"
 	      },
 	      "disabled": true,
 	      "stateBar": ""

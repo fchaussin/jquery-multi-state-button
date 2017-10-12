@@ -5,7 +5,7 @@ Muli State Button jQuery Plugin
 	
 var methods = {
 		init : function(options, callback) {
-			var states = $.extend( /*true, {},*/ $.fn.msb.defaults, options ); 
+			var states = $.extend( $.fn.msb.defaults, options ); 
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
@@ -15,19 +15,19 @@ var methods = {
 				var state = $(this).data('state');
 				// change icon name, and keep it for rebuid
 				var icon = $(this)
-										.find('i.material-icons')
-										.html(states[state].icon.name);
+						.find('i.material-icons')
+						.html(states[state].icon.name);
 				// remove any icon anim css class (msb-anim-*)
-				$(this)
+				$(this) 
 					.find("i.material-icons")
 					.removeClass( function(index, className) {
 						return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
 					});
 				// now, if state icon anim, adding it
-				if(states[state].icon.animClass != false){
+				if(states[state].icon.anim != false){
 					$(this)
 						.find('i.material-icons')
-						.addClass('msb-anim-' + states[state].icon.animClass);
+						.addClass('msb-anim-' + states[state].icon.anim);
 				}
 				// rebuild button
 				$(this)
@@ -71,7 +71,7 @@ $.fn.msb.defaults = {
 		"label": "submit",
 		"icon": {
 			"name": "send", 
-			"animClass": false
+			"anim": false
 		},
 		"disabled": false,
 		"stateBar": ""
@@ -81,7 +81,7 @@ $.fn.msb.defaults = {
 		"label": "sent",
 		"icon": {
 			"name": "check",
-			"animClass": false
+			"anim": false
 		},
 		"disabled": true,
 		"stateBar": ""
@@ -91,7 +91,7 @@ $.fn.msb.defaults = {
 		"label": "try again",
 		"icon": {
 			"name": "warning",
-			"animClass": false
+			"anim": false
 		},
 		"disabled": false,
 		"stateBar": ""
@@ -101,7 +101,7 @@ $.fn.msb.defaults = {
 		"label": "try again",
 		"icon": {
 			"name": "cancel",
-			"animClass": false
+			"anim": false
 		},
 		"disabled": false,
 		"stateBar": ""
@@ -111,7 +111,7 @@ $.fn.msb.defaults = {
 		"label": "processing",
 		"icon": {
 			"name": "refresh",
-			"animClass": "rotate"
+			"anim": "rotate"
 		},
 		"disabled": true,
 		"stateBar": ""
