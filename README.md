@@ -69,8 +69,7 @@ Custom state init
 			"cssClass": "waves-effect waves-light pink",
 			"label": "custom state",
 			"icon": {
-				"name": "help", 
-				"anim": false
+				"name": "help"
 			}
 		}
 	});
@@ -83,6 +82,12 @@ Default state override init
 			"icon": {
 				"name": "thumb_up", 
 				"anim": "bounce"
+			}
+		},
+		"process": {
+			"icon": {
+				"name": "send", 
+				"anim": "fly"
 			}
 		}
 	});
