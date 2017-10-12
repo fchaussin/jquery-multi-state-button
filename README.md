@@ -6,7 +6,7 @@
 
 See the [jquery.msb.js demo exemples](https://codepen.io/fchaussin/pen/vejWKG).
 
-Another [demo with a ajax form](https://codepen.io/fchaussin/pen/mBKjzO)
+Another [demo with ajax submiting](https://codepen.io/fchaussin/pen/mBKjzO) states overriding, init callback, state updates, and updates callbacks...
 
 ### Features
 
