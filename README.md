@@ -80,13 +80,10 @@ Default state override init
 	$('.override').msb({
 		"success": {
 			"cssClass": "lime black-text",
-			"label": "custom state",
 			"icon": {
 				"name": "thumb_up", 
 				"animClass": "bounce"
-			},
-			"disabled": true,
-			"stateBar": ""
+			}
 		}
 	});
 
