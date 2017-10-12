@@ -12,10 +12,11 @@ Another [demo with a ajax form](https://codepen.io/fchaussin/pen/mBKjzO)
 
 - 5 (customizable) defaults states (default, success, error, warning, process)
 - Add your custom states
-- Update the button state
-- Animate icons
-- Compatible with MaterializeCSS icons (for now)
-- Automatically add *.msb* CSS class after init 
+- Update the button state on the fly
+- Animated icons
+- Callback (optional)
+- Compatibility with MaterializeCSS (for now)
+- Automatically add *.msb* CSS class on initialized elements 
 - Status Bar comming soon... (like in this [pen](https://codepen.io/fchaussin/pen/aLYmxG))
 
 ### Install
@@ -51,9 +52,9 @@ Try to be as minimal as you can with your classes to avoid any collision. It's n
 Default init
 
 	$(function() {
-		$('.btn').msb(options);
+		$('.btn').msb(options, callback);
 	});
-*Where `options` is an optional parameter.*
+*Where `options` and `callback` are optional parameters.*
 Once initialized, the button's label and icon are updated by the plugin. The initial button's classes are kept.
 
 Custom state init
