@@ -21,3 +21,34 @@
     80% { top: -0.3em; }
     100% { top: 0; }
 }
+.msb-anim-fly{
+	position:relative;
+	z-index:1;
+	top:0;
+			opacity:1;
+	transform: transform(0,0) rotateY(0deg) scale(1);
+	animation: flying 1s infinite;
+}
+@keyframes flying{
+	0%{
+		transform: translate(0,0) rotateY(0deg) scale(1);
+		opacity:1;
+	}
+	40%{
+		transform: translate(1.5em,-.5em) rotateY(90deg) scale(.71);
+		opacity:.81;		
+	}
+	60%{
+		transform: translate(.2em,-.2em) rotateY(160deg) scale(.41);
+		opacity:.71;
+	}
+	80%{
+		transform: translate(-.81em,-.1em) rotateY(300deg) scale(.61);
+		opacity:.91;
+	}
+	100%{
+		transform: translate(-.3em,-.05em) rotateY(340deg) scale(.8);
+		opacity:1;	
+	}
+}
+
