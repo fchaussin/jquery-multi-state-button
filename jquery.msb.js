@@ -4,8 +4,11 @@ Muli State Button jQuery Plugin
 */
 	
 var methods = {
-		init : function(options) {
+		init : function(options, callback) {
 			var states = $.extend( /* {}, */ $.fn.msb.defaults, options ); 
+			if (typeof callback == 'function') { 
+				callback.call(this);
+			}
 			return this.each( function(){			
 				$(this).addClass('msb');
 				// get state
