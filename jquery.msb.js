@@ -37,8 +37,10 @@ var methods = {
 					.prop("disabled", states[state].disabled);
 			});	
 		},
-		update : function( state ) { 
-			//var states = $.extend( {}, $.fn.msb.defaults, options ); 
+		update : function( state, callback ) { 
+			if (typeof callback == 'function') { 
+				callback.call(this);
+			}
 			return this.each( function(){
 				if($.fn.msb.defaults[state] != undefined){
 					var prevState = $.fn.msb.defaults[$(this).data('state')];
