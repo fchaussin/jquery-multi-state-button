@@ -1,5 +1,7 @@
 # jquery.msb.js #
-> *msb* allow you to have multiple states button using [MaterializeCSS](https://github.com/Dogfalo/materialize)
+
+> *msb* allow you to change the appearance of your buttons on the fly.
+
 > It's my really first jQuery plugin, so any help or suggestions are welcome! 
 
 ### Demo
@@ -25,6 +27,9 @@ Another [demo](https://codepen.io/fchaussin/pen/mBKjzO) in a real life exemple w
   Download [jquery.msb.js](https://raw.githubusercontent.com/fchaussin/jquery-multi-state-button/master/jquery.msb.js) and include the script in your HTML file:
 
 	<script src="jquery.msb.js" type="text/javascript"></script>
+
+It looks really nice with [MaterializeCSS](https://github.com/Dogfalo/materialize) at this point, but a better compatibility with Twitter Bootstrap and Font Awesome icons collection are planned to be implemented.
+	
 
 ### Usage
 
