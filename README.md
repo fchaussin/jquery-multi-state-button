@@ -71,9 +71,7 @@ Custom state init
 			"icon": {
 				"name": "help", 
 				"animClass": false
-			},
-			"disabled": false,
-			"stateBar": ""
+			}
 		}
 	});
 
