@@ -70,7 +70,9 @@ Custom state init
 			"label": "custom state",
 			"icon": {
 				"name": "help"
-			}
+			},
+			"disabled": true,
+			"stateBar": ""
 		}
 	});
 
