@@ -1,8 +1,8 @@
 # jquery.msb.js #
 
-> *msb* allow you to change the appearance of your buttons on the fly.
+> *msb* manage button states, it means changing the label, css class, icon (animated or not), disabled attribute... I've writed this plugin to have a one line function to improve user experience during form submiting.
 
-> It's my really first jQuery plugin, so any help or suggestions are welcome! 
+> It's my really first jQuery plugin, so any [https://github.com/fchaussin/jquery-multi-state-button/issues](help or suggestions) are welcome! ♥
 
 ### Demo
 
@@ -70,7 +70,9 @@ Custom state init
 			"label": "custom state",
 			"icon": {
 				"name": "help"
-			}
+			},
+			"disabled": true,
+			"stateBar": ""
 		}
 	});
 
