@@ -16,9 +16,10 @@
 - Add your custom states
 - Update the button state on the fly
 - Animated icons
-- Callback (optional)
+- Callbacks
 - Compatibility with MaterializeCSS (for now)
 - Automatically add *.msb* CSS class on initialized elements 
+- If the `data-state` attribute hasn't been writen in the HTML, it will be automatically added and set to `data-state='default'`
 - Status Bar comming soon... (like in this [pen](https://codepen.io/fchaussin/pen/aLYmxG))
 
 ### Install
