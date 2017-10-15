@@ -2,7 +2,7 @@
 
 > *msb* manage button states, it means changing the label, css class, icon (animated or not), disabled attribute... I've writed this plugin to have a one line function to improve user experience during form submiting.
 
-> It's my really first jQuery plugin, so any [https://github.com/fchaussin/jquery-multi-state-button/issues](help or suggestions) are welcome! ♥
+> It's my really first jQuery plugin, so any [help or suggestions](https://github.com/fchaussin/jquery-multi-state-button/issues) are welcome! ♥
 
 ### Demo
 
