@@ -11,6 +11,9 @@ var methods = {
 			}
 			return this.each( function(){			
 				$(this).addClass('msb');
+				if (!$(this).attr('data-state')) {
+				    $(this).attr('data-state', 'default');
+				}
 				// get state
 				var state = $(this).data('state');
 				// change icon name, and keep it for rebuid
