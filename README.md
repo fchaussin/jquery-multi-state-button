@@ -8,6 +8,7 @@
 
 - See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG) with very basic exemples.
 - Another [demo](https://codepen.io/fchaussin/pen/mBKjzO) in a real life exemple with ajax submiting, states overriding, init callback, state updates, and updates callbacks...
+- [Here a generic form demo](https://codepen.io/fchaussin/pen/EwdwRg), where button updates are defined with $.ajaxPrefilter
 
 ### Features
 
