@@ -6,9 +6,9 @@
 
 ### Demo
 
-See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG) with very basic exemples.
-
-Another [demo](https://codepen.io/fchaussin/pen/mBKjzO) in a real life exemple with ajax submiting, states overriding, init callback, state updates, and updates callbacks...
+- See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG) with very basic exemples.
+- Another [demo](https://codepen.io/fchaussin/pen/mBKjzO) in a real life exemple with ajax submiting, states overriding, init callback, state updates, and updates callbacks...
+- [Here a generic form demo](https://codepen.io/fchaussin/pen/EwdwRg), where button updates are defined with $.ajaxPrefilter
 
 ### Features
 
@@ -16,9 +16,10 @@ Another [demo](https://codepen.io/fchaussin/pen/mBKjzO) in a real life exemple w
 - Add your custom states
 - Update the button state on the fly
 - Animated icons
-- Callback (optional)
+- Callbacks
 - Compatibility with MaterializeCSS (for now)
 - Automatically add *.msb* CSS class on initialized elements 
+- If the `data-state` attribute hasn't been writen in the HTML, it will be automatically added and set to `data-state='default'`
 - Status Bar comming soon... (like in this [pen](https://codepen.io/fchaussin/pen/aLYmxG))
 
 ### Install
