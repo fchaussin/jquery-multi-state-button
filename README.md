@@ -80,8 +80,8 @@ Default state override init
 
 	$('.override').msb({
 		"success": {
-			"cssClass": "lime black-text",
-			"label": "please wait..."
+			"cssClass": "green yellow-text",
+			"label": "Great success!",
 			"icon": {
 				"name": "thumb_up", 
 				"anim": "bounce"
@@ -90,7 +90,7 @@ Default state override init
 			"stateBar": ""
 		},
 		"process": {
-			"cssClass": "lime black-text",
+			"cssClass": "yellow red-text",
 			"label": "please wait...",
 			"icon": {
 				"name": "send", 
