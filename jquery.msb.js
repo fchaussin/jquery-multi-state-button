@@ -6,7 +6,7 @@ Muli State Button jQuery Plugin
 var methods = {
 		_defaultStates : {},
 		init : function(options, callback) {
-			this._defaultStates = $.extend( true, {}, $.fn.msb.defaults, options ); 
+			this._defaultStates = $.extend( {}, $.fn.msb.defaults, options ); 
 			var self = this;
 			if (typeof callback == 'function') { 
 				callback.call(this);
