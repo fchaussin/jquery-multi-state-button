@@ -2,18 +2,21 @@
 /* 
 Muli State Button jQuery Plugin
 */
-	
+var defaultStates = {};
 var methods = {
-		_defaultStates : {},
+		get_defaultStates : function(){
+			return defaultStates;
+		},
+		set_defaultStates : function(states){
+			defaultStates = states;
+		},
 		init : function(options, callback) {
-			this._defaultStates = $.extend( {}, $.fn.msb.defaults, options ); 
-			var self = this;
-			console.log('init');
-			console.dir(self);
+			var states = $.extend( {}, $.fn.msb.defaults, options ); 
+			this.set_defaultStates(states);
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
-			return this.each( function(){			
+			return this.each( function(){
 				$(this).addClass('msb');
 				if (!$(this).attr('data-state')) {
 				    $(this).attr('data-state', 'default');
@@ -23,7 +26,7 @@ var methods = {
 				// change icon name, and keep it for rebuid
 				var icon = $(this)
 						.find('i.material-icons')
-						.html(self._defaultStates[state].icon.name);
+						.html(states[state].icon.name);
 				// remove any icon anim css class (msb-anim-*)
 				$(this) 
 					.find("i.material-icons")
@@ -31,29 +34,29 @@ var methods = {
 						return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
 					});
 				// now, if state icon anim, adding it
-				if(self._defaultStates[state].icon.anim != false){
+				if(states[state].icon.anim != false){
 					$(this)
 						.find('i.material-icons')
-						.addClass('msb-anim-' + self._defaultStates[state].icon.anim);
+						.addClass('msb-anim-' + states[state].icon.anim);
 				}
 				// rebuild button
 				$(this)
-					.addClass(self._defaultStates[state].cssClass)
+					.addClass(states[state].cssClass)
 					.html(icon)
-					.append(self._defaultStates[state].label)
-					.prop("disabled", self._defaultStates[state].disabled);
+					.append(states[state].label)
+					.prop("disabled", states[state].disabled);
 			});	
 		},
 		update : function( state, callback ) { 
-			var self = this;
 			console.log('update');
-			console.dir(self);
+			console.dir(this.get_defaultStates());
+			var states = this.get_defaultStates();
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
 			return this.each( function(){
-				if(self._defaultStates[state] != undefined){
-					var prevState = self._defaultStates[$(this).data('state')];
+				if(states[state] != undefined){
+					var prevState = states[$(this).data('state')];
 					$(this)
 						.removeClass(prevState.cssClass)
 						.data("state", state);
