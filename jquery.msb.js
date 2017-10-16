@@ -1,4 +1,4 @@
-(function($) {
+(function($, window, document, undefined) {
 /* 
 Muli State Button jQuery Plugin
 */
@@ -122,5 +122,5 @@ $.fn.msb.defaults = {
 	}
 };
 
-})(jQuery);
+})(jQuery, window, document);
 
