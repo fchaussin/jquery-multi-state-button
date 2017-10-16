@@ -8,6 +8,8 @@ var methods = {
 		init : function(options, callback) {
 			this._defaultStates = $.extend( {}, $.fn.msb.defaults, options ); 
 			var self = this;
+			console.log('init');
+			console.dir(self);
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
@@ -44,6 +46,8 @@ var methods = {
 		},
 		update : function( state, callback ) { 
 			var self = this;
+			console.log('update');
+			console.dir(self);
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
