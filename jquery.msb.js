@@ -31,6 +31,7 @@ var methods = {
 				var icon = $(this)
 						.find('i.material-icons')
 						.html(states[state].icon.name);
+				console.log(state);
 				// remove any icon anim css class (msb-anim-*)
 				$(this) 
 					.find("i.material-icons")
