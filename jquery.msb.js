@@ -16,7 +16,7 @@ var set_defaultStates = function(states){
 var methods = {
 		init : function(options, callback) {
 			var states = $.extend( {}, $.fn.msb.defaults, options ); 
-			set_defaultStates.apply(states);
+			set_defaultStates(states);
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
@@ -53,8 +53,8 @@ var methods = {
 		},
 		update : function( state, callback ) { 
 			console.log('update');
-			console.dir(get_defaultStates.apply());
-			var states = get_defaultStates.apply();
+			console.dir(get_defaultStates());
+			var states = get_defaultStates();
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
