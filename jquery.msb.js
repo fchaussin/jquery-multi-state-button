@@ -9,13 +9,13 @@ var get_defaultStates = function(){
 var set_defaultStates = function(states){
 	console.log('before set');			
 	console.dir(this.defaultStates);
-	this.defaultStates = states;
+	this.defaultStates = $.extend( {}, $.fn.msb.defaults, states );
 	console.log('set');
 	console.dir(this.defaultStates);
 };
 var methods = {
 		init : function(options, callback) {
-			var states = $.extend( {}, $.fn.msb.defaults, options ); 
+			var states = $.extend( true, {}, $.fn.msb.defaults, options ); 
 			set_defaultStates(states);
 			if (typeof callback == 'function') { 
 				callback.call(this);
