@@ -7,6 +7,7 @@ var methods = {
 		_defaultStates : {},
 		init : function(options, callback) {
 			this._defaultStates = $.extend( true, {}, $.fn.msb.defaults, options ); 
+			var self = this;
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
@@ -20,7 +21,7 @@ var methods = {
 				// change icon name, and keep it for rebuid
 				var icon = $(this)
 						.find('i.material-icons')
-						.html(methods._defaultStates[state].icon.name);
+						.html(self._defaultStates[state].icon.name);
 				// remove any icon anim css class (msb-anim-*)
 				$(this) 
 					.find("i.material-icons")
@@ -28,26 +29,27 @@ var methods = {
 						return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
 					});
 				// now, if state icon anim, adding it
-				if(methods._defaultStates[state].icon.anim != false){
+				if(self._defaultStates[state].icon.anim != false){
 					$(this)
 						.find('i.material-icons')
-						.addClass('msb-anim-' + methods._defaultStates[state].icon.anim);
+						.addClass('msb-anim-' + self._defaultStates[state].icon.anim);
 				}
 				// rebuild button
 				$(this)
-					.addClass(methods._defaultStates[state].cssClass)
+					.addClass(self._defaultStates[state].cssClass)
 					.html(icon)
-					.append(methods._defaultStates[state].label)
-					.prop("disabled", methods._defaultStates[state].disabled);
+					.append(self._defaultStates[state].label)
+					.prop("disabled", self._defaultStates[state].disabled);
 			});	
 		},
 		update : function( state, callback ) { 
+			var self = this;
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
 			return this.each( function(){
-				if(methods._defaultStates[state] != undefined){
-					var prevState = methods._defaultStates[$(this).data('state')];
+				if(self._defaultStates[state] != undefined){
+					var prevState = self._defaultStates[$(this).data('state')];
 					$(this)
 						.removeClass(prevState.cssClass)
 						.data("state", state);
