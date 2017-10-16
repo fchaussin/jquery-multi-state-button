@@ -3,10 +3,10 @@
 Muli State Button jQuery Plugin
 */
 var defaultStates = {};
-var _get_defaultStates = function(){
+var get_defaultStates = function(){
 	return this.defaultStates;
 };
-var _set_defaultStates = function(states){
+var set_defaultStates = function(states){
 	console.log('before set');			
 	console.dir(this.defaultStates);
 	this.defaultStates = states;
@@ -16,7 +16,7 @@ var _set_defaultStates = function(states){
 var methods = {
 		init : function(options, callback) {
 			var states = $.extend( {}, $.fn.msb.defaults, options ); 
-			_set_defaultStates.apply(states);
+			set_defaultStates.apply(states);
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
@@ -53,8 +53,8 @@ var methods = {
 		},
 		update : function( state, callback ) { 
 			console.log('update');
-			console.dir(_get_defaultStates.apply());
-			var states = _get_defaultStates.apply();
+			console.dir(get_defaultStates.apply());
+			var states = get_defaultStates.apply();
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
