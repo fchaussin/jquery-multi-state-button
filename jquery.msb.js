@@ -1,4 +1,4 @@
-(function($) {
+d(function($) {
 /* 
 Muli State Button jQuery Plugin
 */
@@ -6,7 +6,7 @@ Muli State Button jQuery Plugin
 var methods = {
 		_defaultStates : {},
 		init : function(options, callback) {
-			var this._defaultStates = $.extend( true, {}, $.fn.msb.defaults, options ); 
+			this._defaultStates = $.extend( true, {}, $.fn.msb.defaults, options ); 
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
