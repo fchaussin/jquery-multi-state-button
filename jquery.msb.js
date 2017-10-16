@@ -8,7 +8,11 @@ var methods = {
 			return defaultStates;
 		},
 		_set_defaultStates : function(states){
+			console.log('before set');			
+			console.dir(defaultStates);
 			defaultStates = states;
+			console.log('set');
+			console.dir(defaultStates);
 		},
 		init : function(options, callback) {
 			var states = $.extend( {}, $.fn.msb.defaults, options ); 
