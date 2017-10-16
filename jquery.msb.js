@@ -1,5 +1,6 @@
 /*
-== Muli State Button jQuery Plugin == 
+== Multi-State Button jQuery Plugin == 
+== msb.jquery.js ==
 Version: 0.2.1 
 Plugin URI: https://github.com/fchaussin/jquery-multi-state-button
 Author: fchaussin
