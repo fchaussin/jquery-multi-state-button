@@ -4,8 +4,9 @@ Muli State Button jQuery Plugin
 */
 	
 var methods = {
+		_defaultStates : {},
 		init : function(options, callback) {
-			var states = $.extend( $.fn.msb.defaults, options ); 
+			var this._defaultStates = $.extend( true, {}, $.fn.msb.defaults, options ); 
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
@@ -19,7 +20,7 @@ var methods = {
 				// change icon name, and keep it for rebuid
 				var icon = $(this)
 						.find('i.material-icons')
-						.html(states[state].icon.name);
+						.html(this._defaultStates[state].icon.name);
 				// remove any icon anim css class (msb-anim-*)
 				$(this) 
 					.find("i.material-icons")
@@ -27,17 +28,17 @@ var methods = {
 						return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
 					});
 				// now, if state icon anim, adding it
-				if(states[state].icon.anim != false){
+				if(this._defaultStates[state].icon.anim != false){
 					$(this)
 						.find('i.material-icons')
-						.addClass('msb-anim-' + states[state].icon.anim);
+						.addClass('msb-anim-' + this._defaultStates[state].icon.anim);
 				}
 				// rebuild button
 				$(this)
-					.addClass(states[state].cssClass)
+					.addClass(this._defaultStates[state].cssClass)
 					.html(icon)
-					.append(states[state].label)
-					.prop("disabled", states[state].disabled);
+					.append(this._defaultStates[state].label)
+					.prop("disabled", this._defaultStates[state].disabled);
 			});	
 		},
 		update : function( state, callback ) { 
@@ -46,7 +47,7 @@ var methods = {
 			}
 			return this.each( function(){
 				if($.fn.msb.defaults[state] != undefined){
-					var prevState = $.fn.msb.defaults[$(this).data('state')];
+					var prevState = this._defaultStates[$(this).data('state')];
 					$(this)
 						.removeClass(prevState.cssClass)
 						.data("state", state);
