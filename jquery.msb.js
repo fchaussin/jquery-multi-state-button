@@ -4,15 +4,15 @@ Muli State Button jQuery Plugin
 */
 var defaultStates = {};
 var methods = {
-		get_defaultStates : function(){
+		_get_defaultStates : function(){
 			return defaultStates;
 		},
-		set_defaultStates : function(states){
+		_set_defaultStates : function(states){
 			defaultStates = states;
 		},
 		init : function(options, callback) {
 			var states = $.extend( {}, $.fn.msb.defaults, options ); 
-			this.set_defaultStates(states);
+			methods._set_defaultStates.apply(states);
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
@@ -49,8 +49,8 @@ var methods = {
 		},
 		update : function( state, callback ) { 
 			console.log('update');
-			console.dir(this.get_defaultStates());
-			var states = this.get_defaultStates();
+			console.dir(methods._get_defaultStates.apply());
+			var states = methods._get_defaultStates.apply();
 			if (typeof callback == 'function') { 
 				callback.call(this);
 			}
