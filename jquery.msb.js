@@ -4,14 +4,14 @@ Muli State Button jQuery Plugin
 */
 var defaultStates = {};
 var _get_defaultStates = function(){
-	return defaultStates;
+	return this.defaultStates;
 };
 var _set_defaultStates = function(states){
 	console.log('before set');			
-	console.dir(defaultStates);
-	defaultStates = states;
+	console.dir(this.defaultStates);
+	this.defaultStates = states;
 	console.log('set');
-	console.dir(defaultStates);
+	console.dir(this.defaultStates);
 };
 var methods = {
 		init : function(options, callback) {
