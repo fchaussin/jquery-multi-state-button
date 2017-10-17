@@ -13,7 +13,7 @@
 }
 
 .msb-anim-bounce {
-  animation: msb-anim-bounce 3s infinite ease;
+  animation: msb-anim-bounce 1.5s infinite ease;
 }
 @keyframes msb-anim-bounce {
   0%, 10%, 20%, 50%, 80%, 100% {
@@ -28,40 +28,49 @@
 }
 
 .msb-anim-fly{
-	position:relative;
-	z-index:1;
-	top:0;
-			opacity:1;
-	transform: transform(0,0) rotateY(0deg) scale(1);
-	animation: msb-anim-fly 1s infinite;
+  opacity:1;
+  transform: transform(0,0) rotateY(0deg) scale(1);
+  animation: msb-anim-fly 1s infinite;
 }
 @keyframes msb-anim-fly{
-	0%{
-		transform: translate(0,0) rotateY(0deg) scale(1);
-		opacity:1;
-	}
-	40%{
-		transform: translate(1.5em,-.5em) rotateY(90deg) scale(.71);
-		opacity:.81;		
-	}
-	60%{
-		transform: translate(.2em,-.2em) rotateY(160deg) scale(.41);
-		opacity:.71;
-	}
-	80%{
-		transform: translate(-.81em,-.1em) rotateY(300deg) scale(.61);
-		opacity:.91;
-	}
-	100%{
-		transform: translate(-.3em,-.05em) rotateY(340deg) scale(.8);
-		opacity:1;	
-	}
+  0%{
+    transform: translate(0,0) rotateY(0deg) scale(1);
+    opacity:1;
+  }
+  40%{
+    transform: translate(1em,-.5em) rotateY(90deg) scale(.7);
+    opacity:.81;		
+  }
+  60%{
+    transform: translate(.2em,-.4em) rotateY(160deg) scale(.4);
+    opacity:.71;
+  }
+  80%{
+    transform: translate(-.8em,-.1em) rotateY(280deg) scale(.6);
+    opacity:.91;
+  }
+  100%{
+    transform: translate(-.3em,-.05em) rotateY(340deg) scale(.8);
+    opacity:1;	
+  }
 }
 
-.msb-anim-flash, .msb-anim-blink {
-  animation: msb-anim-flash 2s ease infinite;
+.msb-anim-flash {
+  animation: msb-anim-flash 1s ease infinite;
 }
 @keyframes msb-anim-flash {
+  0%, 10%, 20%, 30%, 40%, 100% {
+    opacity: 1;
+  }
+  4%, 14%, 24%, 34%, 90% {
+    opacity: 0;
+  }
+}
+
+.msb-anim-blink {
+  animation: msb-anim-blink 2s ease infinite;
+}
+@keyframes msb-anim-blink {
   0%, 100%, 50% {
     opacity: 1;
   }
@@ -71,10 +80,10 @@
 }
 
 .msb-anim-pass, .msb-anim-pass-ltr {
-  animation: msb-anim-pass 2s linear infinite;
+  animation: msb-anim-pass 1.5s linear infinite;
 }
 .msb-anim-pass-rtl, .msb-anim-pass-reverse {
-  animation: msb-anim-pass-rtl 2s linear infinite;
+  animation: msb-anim-pass-rtl 1.5s linear infinite;
 }
 @keyframes msb-anim-pass {
   0% {
@@ -118,10 +127,10 @@
   2% {
     transform: rotate(15deg);
   }
-  4% {
+  4%, 12% {
     transform: rotate(-18deg);
   }
-  6% {
+  6%, 14% {
     transform: rotate(18deg);
   }
   8% {
@@ -129,12 +138,6 @@
   }
   10% {
     transform: rotate(22deg);
-  }
-  12% {
-    transform: rotate(-18deg);
-  }
-  14% {
-    transform: rotate(18deg);
   }
   16% {
     transform: rotate(-12deg);
@@ -148,11 +151,10 @@
 }
 
 .msb-anim-shake {
-  -webkit-animation: msb-anim-shake 2.5s ease infinite;
-  animation: msb-anim-shake 2.5s ease infinite;
   transform-origin-x: 90%;
   transform-origin-y: 35%;
   transform-origin-z: initial;
+  animation: msb-anim-shake 2.5s ease infinite;
 }
 @keyframes msb-anim-shake {
   0% {
@@ -161,41 +163,11 @@
   8% {
     transform: rotate(12deg);
   }
-  10% {
+  10%, 28%, 30%, 48%, 50%, 68% {
     transform: rotate(24deg);
   }
-  18% {
+  18%, 20%, 38%, 40%, 58%, 60% {
     transform: rotate(-24deg);
-  }
-  20% {
-    transform: rotate(-24deg);
-  }
-  28% {
-    transform: rotate(24deg);
-  }
-  30% {
-    transform: rotate(24deg);
-  }
-  38% {
-    transform: rotate(-24deg);
-  }
-  40% {
-    transform: rotate(-24deg);
-  }
-  48% {
-    transform: rotate(24deg);
-  }
-  50% {
-    transform: rotate(24deg);
-  }
-  58% {
-    transform: rotate(-24deg);
-  }
-  60% {
-    transform: rotate(-24deg);
-  }
-  68% {
-    transform: rotate(24deg);
   }
   75%, 100% {
     transform: rotate(0deg);
@@ -228,14 +200,14 @@
 }
 @keyframes msb-anim-burst {
   0% {
-    opacity: .6;
+    opacity: 0.8;
   }
-  50% {
+  60% {
     transform: scale(1.8);
-    opacity: 0;
+    opacity: 0.3;
   }
   100% {
-    opacity: 0;
+    opacity: 0.1;
   }
 }
 
