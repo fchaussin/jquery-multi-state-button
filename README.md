@@ -77,8 +77,7 @@ Custom state init
 			"icon": {
 				"name": "help"
 			},
-			"disabled": true,
-			"stateBar": ""
+			"disabled": true
 		}
 	});
 
@@ -86,14 +85,11 @@ Default state override init
 
 	$('.override').msb({
 		"success": {
-			"cssClass": "green yellow-text",
-			"label": "Great success!",
 			"icon": {
 				"name": "thumb_up", 
 				"anim": "bounce"
 			},
-			"disabled": true,
-			"stateBar": ""
+			"disabled": true
 		},
 		"process": {
 			"cssClass": "yellow red-text",
