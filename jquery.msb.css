@@ -200,14 +200,14 @@
 }
 @keyframes msb-anim-burst {
   0% {
-    opacity: .6;
+    opacity: 0.8;
   }
   60% {
     transform: scale(1.8);
-    opacity: .2;
+    opacity: 0.3;
   }
   100% {
-    opacity: 0;
+    opacity: 0.1;
   }
 }
 
