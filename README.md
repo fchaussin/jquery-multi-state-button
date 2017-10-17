@@ -185,7 +185,7 @@ Icons animations available:
 - bounce
 - flash | blink
 - pass | pass-ltr
-- pass-reverse |pass-trl
+- pass-reverse | pass-rtl
 - shake
 - ring
 - pulse
