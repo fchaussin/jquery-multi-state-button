@@ -13,7 +13,7 @@
 }
 
 .msb-anim-bounce {
-  animation: msb-anim-bounce 4s infinite ease;
+  animation: msb-anim-bounce 3s infinite ease;
 }
 @keyframes msb-anim-bounce {
   0%, 10%, 20%, 50%, 80%, 100% {
@@ -258,7 +258,7 @@
 }
 
 .msb-anim-pulse {
-  animation: msb-anim-pulse 2s linear infinite;
+  animation: msb-anim-pulse 1s linear infinite;
 }
 @keyframes msb-anim-pulse {
   0%, 50%, 100% {
