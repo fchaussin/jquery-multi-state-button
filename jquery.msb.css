@@ -80,10 +80,10 @@
 }
 
 .msb-anim-pass, .msb-anim-pass-ltr {
-  animation: msb-anim-pass 2s linear infinite;
+  animation: msb-anim-pass 1.5s linear infinite;
 }
 .msb-anim-pass-rtl, .msb-anim-pass-reverse {
-  animation: msb-anim-pass-rtl 2s linear infinite;
+  animation: msb-anim-pass-rtl 1.5s linear infinite;
 }
 @keyframes msb-anim-pass {
   0% {
