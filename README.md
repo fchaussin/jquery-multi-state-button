@@ -172,9 +172,27 @@ Where:
 
 - `cssClass` is a `CSS class` to style the button (default options are using MaterializeCSS classes)
 - `label` is a `string` to give a label to the button
-- `icon.name` is the MaterializeCSS icon name ([see MaterializeCSS Icons](http://materializecss.com/icons.html))
-- `icon.animClass` is `CSS class` to animate the icon, or `false` if no animation .
-- `disabled` is `true` or `false` to set or not the `disabled attribute` to the `<button> markup`, this will override your `cssClass` colors as MaterializeCSS do with `disabled elements`. `Disabled` is not working on a `<a> markup` so it will apply the `.msb` defined colors.
+- `icon.name` is the MaterializeCSS icon label ([see MaterializeCSS Icons](http://materializecss.com/icons.html))
+- `icon.anim` is the `animation name` related to [jquery.msb.css](https://github.com/fchaussin/jquery-multi-state-button/blob/dev/jquery.msb.css) to animate the icon, or `false` if no animation. Check the animation list below.
+- `disabled` is `true` or `false` to set or not the `disabled attribute` to the `BUTTON markup`, this will override your `cssClass` colors as MaterializeCSS do with `disabled elements`. `Disabled` is not working on a `<a> markup` so it will apply the `.msb` defined colors.
 - `stateBar` is a CSS class to style the state bar, if empty, *cssClass* value will be used instead
 
+
+Icons animations available:
+- rotate | spin
+- bounce
+- flash | blink
+- pass | pass-ltr
+- pass-reverse |pass-trl
+- shake
+- ring
+- pulse
+- fall
+- burst
+- tada
+- fly
+
+### Coming soon features
+
+You can follow the coming soon features in the [todo list](https://github.com/fchaussin/jquery-multi-state-button/projects/1).
 
