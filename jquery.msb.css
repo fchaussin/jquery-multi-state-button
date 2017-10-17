@@ -13,7 +13,7 @@
 }
 
 .msb-anim-bounce {
-  animation: msb-anim-bounce 3s infinite ease;
+  animation: msb-anim-bounce 1.5s infinite ease;
 }
 @keyframes msb-anim-bounce {
   0%, 10%, 20%, 50%, 80%, 100% {
@@ -28,31 +28,31 @@
 }
 
 .msb-anim-fly{
-	opacity:1;
-	transform: transform(0,0) rotateY(0deg) scale(1);
-	animation: msb-anim-fly 1s infinite;
+  opacity:1;
+  transform: transform(0,0) rotateY(0deg) scale(1);
+  animation: msb-anim-fly 1s infinite;
 }
 @keyframes msb-anim-fly{
-	0%{
-		transform: translate(0,0) rotateY(0deg) scale(1);
-		opacity:1;
-	}
-	40%{
-		transform: translate(1.2em,-.5em) rotateY(90deg) scale(.71);
-		opacity:.81;		
-	}
-	60%{
-		transform: translate(.2em,-.2em) rotateY(160deg) scale(.41);
-		opacity:.71;
-	}
-	80%{
-		transform: translate(-.81em,-.1em) rotateY(300deg) scale(.61);
-		opacity:.91;
-	}
-	100%{
-		transform: translate(-.3em,-.05em) rotateY(340deg) scale(.8);
-		opacity:1;	
-	}
+  0%{
+    transform: translate(0,0) rotateY(0deg) scale(1);
+    opacity:1;
+  }
+  40%{
+    transform: translate(1em,-.5em) rotateY(90deg) scale(.7);
+    opacity:.81;		
+  }
+  60%{
+    transform: translate(.2em,-.2em) rotateY(160deg) scale(.4);
+    opacity:.71;
+  }
+  80%{
+    transform: translate(-.8em,-.1em) rotateY(300deg) scale(.6);
+    opacity:.91;
+  }
+  100%{
+    transform: translate(-.3em,-.05em) rotateY(340deg) scale(.8);
+    opacity:1;	
+  }
 }
 
 .msb-anim-flash {
