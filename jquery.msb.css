@@ -28,10 +28,7 @@
 }
 
 .msb-anim-fly{
-	position:relative;
-	z-index:1;
-	top:0;
-			opacity:1;
+	opacity:1;
 	transform: transform(0,0) rotateY(0deg) scale(1);
 	animation: msb-anim-fly 1s infinite;
 }
@@ -154,11 +151,10 @@
 }
 
 .msb-anim-shake {
-  -webkit-animation: msb-anim-shake 2.5s ease infinite;
-  animation: msb-anim-shake 2.5s ease infinite;
   transform-origin-x: 90%;
   transform-origin-y: 35%;
   transform-origin-z: initial;
+  animation: msb-anim-shake 2.5s ease infinite;
 }
 @keyframes msb-anim-shake {
   0% {
