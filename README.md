@@ -183,7 +183,8 @@ Where:
 Icons animations available:
 - rotate | spin *(alias)*
 - bounce
-- flash | blink
+- flash
+- blink
 - pass | pass-ltr *(alias)*
 - pass-reverse | pass-rtl *(alias)*
 - shake
@@ -193,6 +194,7 @@ Icons animations available:
 - burst
 - tada
 - fly
+You can see exemples on this [demo](https://codepen.io/fchaussin/pen/vejWKG) 
 
 ### Coming soon features
 
