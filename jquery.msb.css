@@ -56,13 +56,13 @@
 }
 
 .msb-anim-flash {
-  animation: msb-anim-flash 2s ease infinite;
+  animation: msb-anim-flash 1s ease infinite;
 }
 @keyframes msb-anim-flash {
-  0%, 5%, 10%, 15%, 20%, 40%, 50%, 100% {
+  0%, 10%, 20%, 30%, 40%, 100% {
     opacity: 1;
   }
-  2%, 7%, 12%, 17%, 45%, 75% {
+  4%, 14%, 24%, 34%, 45% {
     opacity: 0;
   }
 }
@@ -163,11 +163,41 @@
   8% {
     transform: rotate(12deg);
   }
-  10%, 28%, 30%, 48%, 50%, 68% {
+  10% {
     transform: rotate(24deg);
   }
-  18%, 20%, 38%, 40%, 58%, 60% {
+  18% {
     transform: rotate(-24deg);
+  }
+  20% {
+    transform: rotate(-24deg);
+  }
+  28% {
+    transform: rotate(24deg);
+  }
+  30% {
+    transform: rotate(24deg);
+  }
+  38% {
+    transform: rotate(-24deg);
+  }
+  40% {
+    transform: rotate(-24deg);
+  }
+  48% {
+    transform: rotate(24deg);
+  }
+  50% {
+    transform: rotate(24deg);
+  }
+  58% {
+    transform: rotate(-24deg);
+  }
+  60% {
+    transform: rotate(-24deg);
+  }
+  68% {
+    transform: rotate(24deg);
   }
   75%, 100% {
     transform: rotate(0deg);
