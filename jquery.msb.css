@@ -58,7 +58,7 @@
 	}
 }
 
-.msb-anim-flash, .msb-anim-blink {
+.msb-anim-flash {
   animation: msb-anim-flash 2s ease infinite;
 }
 @keyframes msb-anim-flash {
