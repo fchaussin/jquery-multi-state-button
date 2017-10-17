@@ -30,22 +30,22 @@
 	<script src="jquery.msb.js" type="text/javascript"></script>
 
 > It looks really nice with [MaterializeCSS](https://github.com/Dogfalo/materialize) because default options are using *MaterializeCSS* Classes, but you can override the defaults states cssClass options with Twitter Bootstrap classes. 
-> *Glyph icons* and *Font Awesome* icons collection are planned to be supported.
+> *Glyph icons* and *Font Awesome* icons collections are planned to be supported.
 	
 
 ### Usage
 
 HTML
 
-	<a class="btnwaves-effect waves-light" data-state="warning">
-		<i class="material-icons right">cloud</i>
-		button label
-	</a>
 	<a class="btn" data-state="error">
 		<i class="material-icons left">cloud</i>
 		button
 	</a>
-	<a class="btn" data-state="process">
+	<a class="btn waves-effect waves-light" data-state="warning">
+		<i class="material-icons right">cloud</i>
+		button label
+	</a>
+	<a class="btn">
 		button without icon
 	</a>
 	<button class="btn waves-effect waves-light" data-state="default">
@@ -53,7 +53,7 @@ HTML
 		button
 	</button>
 
-> Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state should be used during the init. 
+> Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state will be set on init. If `data-state` isn't added manually, it will be automatically added and setted to `deafult` on  init. 
 
 > Try to be as minimal as you can with your classes in the HTML to avoid any collision. It's not recommanded to assign color classes at this point, set it in the options (`cssClass`) by "overriding state" or using "custom state". This is because theses classes are kept during button updates. So if you have colors in your HTML, it will be kept with the 'cssClass' color.
 
