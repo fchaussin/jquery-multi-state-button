@@ -34,7 +34,6 @@ It looks really nice with [MaterializeCSS](https://github.com/Dogfalo/materializ
 
 ### Usage
 
-
 HTML
 
 	<a class="btnwaves-effect waves-light" data-state="warning">
@@ -52,8 +51,13 @@ HTML
 		<i class="material-icons left">cloud</i>
 		button
 	</button>
+
 Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state should be used during the init. 
-Try to be as minimal as you can with your classes to avoid any collision. It's not recommanded to assign color class at this point, use `Custom state` or `Default state overriding` for that.
+
+Try to be as minimal as you can with your classes in the HTML to avoid any collision. It's not recommanded to assign color classes at this point, set it in the options (`cssClass`) by "overriding state" or using "custom state".
+
+
+JAVASCRIPT
 
 Default init
 
@@ -96,14 +100,15 @@ Default state override init
 			"icon": {
 				"name": "send", 
 				"anim": "fly"
-				},
-		      "disabled": true,
-		      "stateBar": ""
+				}
 		    }
 		}
 	});
 
-Update button state
+You can partially init the options for `defaults states` or `custom states`, it will be merged with the default options.
+
+
+##Update button state
 
 	$('a.msb').first().msb('update','success');
 	$('button#submit)').msb('update','customState');	
