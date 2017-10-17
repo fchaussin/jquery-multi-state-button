@@ -13,7 +13,7 @@
 }
 
 .msb-anim-bounce {
-  animation: msb-anim-bounce .5s infinite ease;
+  animation: msb-anim-bounce 2s infinite ease;
 }
 @keyframes msb-anim-bounce {
   0%, 10%, 20%, 50%, 80%, 100% {
@@ -106,7 +106,7 @@
 }
 
 .msb-anim-ring {
-  animation: msb-anim-ring 3s ease infinite;
+  animation: msb-anim-ring 2s ease infinite;
   transform-origin-x: 50%;
   transform-origin-y: 0px;
   transform-origin-z: initial;
@@ -257,3 +257,14 @@
   }
 }
 
+.msb-anim-pulse {
+  animation: msb-anim-pulse 2s linear infinite;
+}
+@keyframes msb-anim-pulse {
+  0%, 50%, 100% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+}
