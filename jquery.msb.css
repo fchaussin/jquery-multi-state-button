@@ -38,7 +38,7 @@
 		opacity:1;
 	}
 	40%{
-		transform: translate(1.5em,-.5em) rotateY(90deg) scale(.71);
+		transform: translate(1.2em,-.5em) rotateY(90deg) scale(.71);
 		opacity:.81;		
 	}
 	60%{
