@@ -34,7 +34,6 @@ It looks really nice with [MaterializeCSS](https://github.com/Dogfalo/materializ
 
 ### Usage
 
-
 HTML
 
 	<a class="btnwaves-effect waves-light" data-state="warning">
@@ -52,8 +51,13 @@ HTML
 		<i class="material-icons left">cloud</i>
 		button
 	</button>
-Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state should be used during the init. 
-Try to be as minimal as you can with your classes to avoid any collision. It's not recommanded to assign color class at this point, use `Custom state` or `Default state overriding` for that.
+
+*Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state should be used during the init.* 
+
+*Try to be as minimal as you can with your classes in the HTML to avoid any collision. It's not recommanded to assign color classes at this point, set it in the options (`cssClass`) by "overriding state" or using "custom state".*
+
+
+JAVASCRIPT
 
 Default init
 
@@ -61,7 +65,7 @@ Default init
 		$('.btn').msb(options, callback);
 	});
 *Where `options` and `callback` are optional parameters.*
-Once initialized, the button's label and icon are updated by the plugin. The initial button's classes are kept.
+*Once initialized, the button's label and icon are updated by the plugin. The initial button's classes are kept.*
 
 Custom state init
 
@@ -96,20 +100,21 @@ Default state override init
 			"icon": {
 				"name": "send", 
 				"anim": "fly"
-				},
-		      "disabled": true,
-		      "stateBar": ""
+				}
 		    }
 		}
 	});
+
+*You can partially init the options for `defaults states` or `custom states`, it will be merged with the default options.*
 
 Update button state
 
 	$('a.msb').first().msb('update','success');
 	$('button#submit)').msb('update','customState');	
+
 *Be careful to use the proper DOM selector if you have several .msb buttons in your document.*
-Initial class of the button are kept (such as *btn, waves-effect, waves-light...*).
-More exemples in the [demo](https://codepen.io/fchaussin/pen/vejWKG).
+*Initial class of the button are kept (such as `btn, waves-effect, waves-light...`).*
+*More exemples in the [demo](https://codepen.io/fchaussin/pen/vejWKG).*
 
 ### Options
 
