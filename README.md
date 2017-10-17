@@ -181,11 +181,11 @@ Where:
 
 
 Icons animations available:
-- rotate | spin
+- rotate | spin *(alias)*
 - bounce
 - flash | blink
-- pass | pass-ltr
-- pass-reverse | pass-rtl
+- pass | pass-ltr *(alias)*
+- pass-reverse | pass-rtl *(alias)*
 - shake
 - ring
 - pulse
