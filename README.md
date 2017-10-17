@@ -180,13 +180,13 @@ Where:
 - `stateBar` is a CSS class to style the state bar, if empty, *cssClass* value will be used instead
 
 
-Icons animations available:
-- rotate | spin *(alias)*
+Icons animations list:
+- rotate | spin *(aliases)*
 - bounce
 - flash
 - blink
-- pass | pass-ltr *(alias)*
-- pass-reverse | pass-rtl *(alias)*
+- pass | pass-ltr *(aliases)*
+- pass-reverse | pass-rtl *(aliases)*
 - shake
 - ring
 - pulse
@@ -194,6 +194,7 @@ Icons animations available:
 - burst
 - tada
 - fly
+
 You can see exemples on this [demo](https://codepen.io/fchaussin/pen/vejWKG) 
 
 ### Coming soon features
