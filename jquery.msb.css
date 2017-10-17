@@ -1,9 +1,9 @@
 /* jquery.msb animations classes */
 
-.msb-anim-rotate {
-  animation: msb-rotate 1s infinite linear;
+.msb-anim-rotate, .msb-anim-spin {
+  animation: msb-anim-rotate 1s infinite linear;
 }
-@keyframes msb-rotate {
+@keyframes msb-anim-rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -11,25 +11,31 @@
     transform: rotate(360deg);
   }
 }
+
 .msb-anim-bounce {
-  position: relative;
-  animation: bouncing .5s infinite ease;
+  animation: msb-anim-bounce 3s infinite ease;
 }
-@keyframes bouncing {
-    0% { top: 0; }
-    50% { top: -0.2em; }
-    80% { top: -0.3em; }
-    100% { top: 0; }
+@keyframes msb-anim-bounce {
+  0%, 10%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-0.2em);
+  }
+  60% {
+    transform: translateY(-0.3em);
+  }
 }
+
 .msb-anim-fly{
 	position:relative;
 	z-index:1;
 	top:0;
 			opacity:1;
 	transform: transform(0,0) rotateY(0deg) scale(1);
-	animation: flying 1s infinite;
+	animation: msb-anim-fly 1s infinite;
 }
-@keyframes flying{
+@keyframes msb-anim-fly{
 	0%{
 		transform: translate(0,0) rotateY(0deg) scale(1);
 		opacity:1;
@@ -52,3 +58,213 @@
 	}
 }
 
+.msb-anim-flash, .msb-anim-blink {
+  animation: msb-anim-flash 2s ease infinite;
+}
+@keyframes msb-anim-flash {
+  0%, 100%, 50% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.msb-anim-pass, .msb-anim-pass-ltr {
+  animation: msb-anim-pass 2s linear infinite;
+}
+.msb-anim-pass-rtl, .msb-anim-pass-reverse {
+  animation: msb-anim-pass-rtl 2s linear infinite;
+}
+@keyframes msb-anim-pass {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+@keyframes msb-anim-pass-rtl {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+
+.msb-anim-ring {
+  animation: msb-anim-ring 2s ease infinite;
+  transform-origin-x: 50%;
+  transform-origin-y: 0px;
+  transform-origin-z: initial;
+}
+@keyframes msb-anim-ring {
+  0% {
+    transform: rotate(-15deg);
+  }
+  2% {
+    transform: rotate(15deg);
+  }
+  4% {
+    transform: rotate(-18deg);
+  }
+  6% {
+    transform: rotate(18deg);
+  }
+  8% {
+    transform: rotate(-22deg);
+  }
+  10% {
+    transform: rotate(22deg);
+  }
+  12% {
+    transform: rotate(-18deg);
+  }
+  14% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-12deg);
+  }
+  18% {
+    transform: rotate(12deg);
+  }
+  20%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+.msb-anim-shake {
+  -webkit-animation: msb-anim-shake 2.5s ease infinite;
+  animation: msb-anim-shake 2.5s ease infinite;
+  transform-origin-x: 90%;
+  transform-origin-y: 35%;
+  transform-origin-z: initial;
+}
+@keyframes msb-anim-shake {
+  0% {
+    transform: rotate(-12deg);
+  }
+  8% {
+    transform: rotate(12deg);
+  }
+  10% {
+    transform: rotate(24deg);
+  }
+  18% {
+    transform: rotate(-24deg);
+  }
+  20% {
+    transform: rotate(-24deg);
+  }
+  28% {
+    transform: rotate(24deg);
+  }
+  30% {
+    transform: rotate(24deg);
+  }
+  38% {
+    transform: rotate(-24deg);
+  }
+  40% {
+    transform: rotate(-24deg);
+  }
+  48% {
+    transform: rotate(24deg);
+  }
+  50% {
+    transform: rotate(24deg);
+  }
+  58% {
+    transform: rotate(-24deg);
+  }
+  60% {
+    transform: rotate(-24deg);
+  }
+  68% {
+    transform: rotate(24deg);
+  }
+  75%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+.msb-anim-tada {
+  animation: msb-anim-tada 2s linear infinite;
+}
+@keyframes msb-anim-tada {
+  0% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(.9) rotate(-8deg);
+  }
+  30%, 50%, 70% {
+    transform: scale(1.3) rotate(8deg);
+  }
+  40%, 60% {
+    transform: scale(1.3) rotate(-8deg);
+  }
+  80%, 100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.msb-anim-burst {
+  animation: msb-anim-burst 2s infinite linear;
+}
+@keyframes msb-anim-burst {
+  0% {
+    opacity: .6;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.msb-anim-fall {
+  animation: msb-anim-fall 2s linear infinite;
+}
+@keyframes msb-anim-fall {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+}
+
+.msb-anim-pulse {
+  animation: msb-anim-pulse 1s linear infinite;
+}
+@keyframes msb-anim-pulse {
+  0%, 50%, 100% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+}
