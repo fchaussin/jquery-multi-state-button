@@ -124,7 +124,7 @@ The default `options` are:
 		"anim": false
 	      },
 	      "disabled": false,
-	      "stateBar": "blue darken-2"
+	      "stateBar": ""
 	    },
 	    "success": {
 	      "cssClass": "green",
@@ -134,7 +134,7 @@ The default `options` are:
 		"anim": false
 	      },
 	      "disabled": true,
-	      "stateBar": "green darken-2"
+	      "stateBar": ""
 	    },
 	    "warning": {
 	      "cssClass": "orange",
@@ -144,7 +144,7 @@ The default `options` are:
 		"anim": false
 	      },
 	      "disabled": false,
-	      "stateBar": "orange darken-2"
+	      "stateBar": ""
 	    },
 	    "error": {
 	      "cssClass": "red",
@@ -154,7 +154,7 @@ The default `options` are:
 		"anim": false
 	      },
 	      "disabled": false,
-	      "stateBar": "red darken-2"
+	      "stateBar": ""
 	    },
 	    "process": {
 	      "cssClass": "yellow black-text",
@@ -164,7 +164,7 @@ The default `options` are:
 		"anim": "rotate"
 	      },
 	      "disabled": true,
-	      "stateBar": "chameleon"
+	      "stateBar": "msb-anim-chameleon"
 	    }
 	  }
 
