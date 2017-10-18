@@ -17,10 +17,8 @@
 - Update the button state on the fly
 - Animated icons
 - Callbacks
-- Compatibility with MaterializeCSS (for now)
-- Automatically add *.msb* CSS class on initialized elements 
-- If the `data-state` attribute hasn't been writen in the HTML, it will be automatically added and set to `data-state='default'`
-- Status Bar comming soon... (like in this [pen](https://codepen.io/fchaussin/pen/aLYmxG))
+- Compatibility with *MaterializeCSS* and *Font-Awesome* icons collections
+- Status Bar decoration
 
 ### Install
 
@@ -53,9 +51,9 @@ HTML
 		button
 	</button>
 
-> Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state will be set on init. If `data-state` isn't added manually, it will be automatically added and setted to `deafult` on  init. 
+> Use the data attribute `data-state="stateName"` where `stateName` is a string registered in the `options` to identify which state will be set on init. If `data-state` isn't writen in the HTML, it will be automatically added and setted to `deafult` on jquery-msb init. 
 
-> Try to be as minimal as you can with your classes in the HTML to avoid any collision. It's not recommanded to assign color classes at this point, set it in the options (`cssClass`) by "overriding state" or using "custom state". This is because theses classes are kept during button updates. So if you have colors in your HTML, it will be kept with the 'cssClass' color.
+>  It's not recommanded to assign color classes in the HTML, you can set it in the `options` (`cssClass`) by *overriding states* or using *custom states*. All the classes you put in HTML are kept during all button updates. So if you have color classes in your HTML, it will be kept after button update and you will get a CSS conflict (2 color classes).
 
 
 JAVASCRIPT
@@ -109,8 +107,8 @@ Update button state
 	$('a.msb').first().msb('update','success');
 	$('button#submit)').msb('update','customState');	
 
-> Be careful to use the proper DOM selector if you have several .msb buttons in your document.
-> Initial class (writen in the HTML) of the button are kept (such as `btn, waves-effect, waves-light...`).
+> Be careful to use the proper DOM selector if you have several .msb buttons in your document. The `id` attribute is the safer selector.
+> After button init, the initial classes (writen in the HTML) of are kept (such as `btn, waves-effect, waves-light...`).
 *More exemples in the [demo](https://codepen.io/fchaussin/pen/vejWKG).*
 
 ### Options
@@ -166,18 +164,18 @@ The default `options` are:
 		"anim": "rotate"
 	      },
 	      "disabled": true,
-	      "stateBar": ""
+	      "stateBar": "msb-anim-chameleon"
 	    }
 	  }
 
 Where:
 
-- `cssClass` is a `CSS class` to style the button (default options are using MaterializeCSS classes)
-- `label` is a `string` to give a label to the button
-- `icon.name` is the Material Design icon label ([see Material Icons](https://material.io/icons/))
-- `icon.anim` is the `animation name` related to [jquery.msb.css](https://github.com/fchaussin/jquery-multi-state-button/blob/dev/jquery.msb.css) to animate the icon, or `false` if no animation. Check the animation list below.
-- `disabled` is `true` or `false` to set or not the `disabled attribute` to the `BUTTON markup`, this will override your `cssClass` colors as MaterializeCSS do with `disabled elements`. `Disabled` is not working on a `<a> markup` so it will apply the `.msb` defined colors.
-- `stateBar` is a CSS class to style the state bar, if empty, *cssClass* value will be used instead
+- `cssClass`: (`string`) is a *CSS class* to style the button (default options are using MaterializeCSS classes).
+- `label`: (`string`) is the button's label.
+- `icon.name`: (`string`) is the [*Material Design*](https://material.io/icons/) icon label or the [*Font Awesome*](http://fontawesome.io/icons/) class name without the *fa-* prefixe.
+- `icon.anim`: (mixed `string`|`false`) is the *animation class name* (without prefix) to animate the icon, `false` if no animation. Check the animation list and a live demo link below.
+- `disabled`: (`boolean`) is `true` or `false` to set or not the *disabled attribute* to the *BUTTON markup*, MaterializeCSS will override your `cssClass` colors as it usually do with *disabled elements*. `Disabled` is not working on a *A markup* so in this case it will apply the `cssClass` colors.
+- `stateBar`: (mixed `string`|`false`) is a CSS class to style the state bar. The *State Bar* is an additionnal button decoration, it allow to keep a colored border when a button is `disabled` and color is forced to gray by the CSS framework. A multicolor animated background is available under the name: *msb-anim-chameleon*.
 
 
 Icons animations list:

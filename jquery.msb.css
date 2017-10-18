@@ -1,5 +1,49 @@
-/* jquery.msb animations classes */
+.msb > div.bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	height: 5px;
+	width: 100%;
+	border-top: 1px solid #fff;
+}
 
+/* ************************************
+*  jquery-msb animations classes
+*  ***********************************/
+
+/* State Bar background anim classes */
+.msb-anim-chameleon {
+	background: linear-gradient(
+		to right,
+		#ff3535 0%,
+		#ffb22d 8%,
+		#f7df00 16%,
+		#26ff6c 25%,
+		#268bff 34%,
+		#8b3cff 42%,
+		#ff3535 50%,
+		#ffb22d 58%,
+		#f7df00 66%,
+		#26ff6c 75%,
+		#268bff 84%,
+		#8b3cff 92%,
+		#ff3535 100%
+	);
+	background-size: 200%;
+	background-repeat: repeat-x;
+	animation: msb-anim-progressing 1s linear infinite;
+}
+@keyframes msb-anim-progressing {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+/* Icon anim classes */
 .msb-anim-rotate, .msb-anim-spin {
   animation: msb-anim-rotate 1s infinite linear;
 }
