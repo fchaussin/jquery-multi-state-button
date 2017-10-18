@@ -8,14 +8,14 @@ Author URI: https://francoischaussin.com
 License: MIT License (MIT)
 */
 (function($, window, document, undefined) {
-	var defaultStates = {};
-	var get_defaultStates = function() {
+	var defaultStates = {},
+	get_defaultStates = function() {
 		return this.defaultStates;
-	};
-	var set_defaultStates = function(states) {
+	},
+	set_defaultStates = function(states) {
 		this.defaultStates = $.extend(true, this.defaultStates, states);
-	};
-	var methods = {
+	},
+	methods = {
 		init: function(options, callback) {
 			var states = $.extend(true, {}, $.fn.msb.defaults, options);
 			set_defaultStates(states);
@@ -51,21 +51,38 @@ License: MIT License (MIT)
 		},
 		_build: function(el, state) {
 			var states = get_defaultStates();
-			// change icon name, and keep it for rebuid
-			var icon = el.find("i.material-icons").html(states[state].icon.name);
-			// remove any icon anim css class (msb-anim-*)
-			el.find("i.material-icons").removeClass(function(index, className) {
-				return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
-			});
-			// now, if state icon anim, adding it
-			if (states[state].icon.anim != false) {
-				el.find("i.material-icons").addClass("msb-anim-" + states[state].icon.anim);
+			var icon = "";
+			var md = el.find("i.material-icons");
+			var fa = el.find("i.fa");
+			if (md.length > 0) {
+				icon = md.html(states[state].icon.name);
+				// remove any icon anim css class (msb-anim-*)
+				md.removeClass(function(index, className) {
+					return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
+				});
+				// now, if state icon anim, adding it
+				if (states[state].icon.anim != false) {
+					md.addClass("msb-anim-" + states[state].icon.anim);
+				}
+			} else if (fa.length > 0) {
+				fa.removeClass(function(index, className) {
+					return (className.match(/(^|\s)fa-\S+/g) || []).join(" ");
+				});
+				fa.removeClass(function(index, className) {
+					return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
+				});
+				icon = fa.addClass('fa-' + states[state].icon.name);
+				// now, if state icon anim, adding it
+				if (states[state].icon.anim != false) {
+					fa.addClass("msb-anim-" + states[state].icon.anim);
+				}
 			}
 			// rebuild button
-			el.addClass(states[state].cssClass)
-			  .html(icon)
-			  .append(states[state].label)
-			  .prop("disabled", states[state].disabled);
+			el
+				.addClass(states[state].cssClass)
+				.html(icon)
+				.append(states[state].label)
+				.prop("disabled", states[state].disabled);
 		}
 	};
 
