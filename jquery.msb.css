@@ -32,7 +32,15 @@
 	);
 	background-size: 200%;
 	background-repeat: repeat-x;
-	animation: msb-anim-pass 1s linear infinite;
+	animation: msb-anim-progressing 1s linear infinite;
+}
+@keyframes msb-anim-progressing {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
 }
 
 /* Icon anim classes */
