@@ -175,7 +175,7 @@ Where:
 - `icon.name`: (`string`) is the [*Material Design*](https://material.io/icons/) icon label or the [*Font Awesome*](http://fontawesome.io/icons/) class name without the *fa-* prefixe.
 - `icon.anim`: (mixed `string`|`false`) is the *animation class name* (without prefix) to animate the icon, `false` if no animation. Check the animation list and a live demo link below.
 - `disabled`: (`boolean`) is `true` or `false` to set or not the *disabled attribute* to the *BUTTON markup*, MaterializeCSS will override your `cssClass` colors as it usually do with *disabled elements*. `Disabled` is not working on a *A markup* so in this case it will apply the `cssClass` colors.
-- `stateBar`: (mixed `string`|`false`) is a CSS class to style the state bar. The *State Bar* is an additionnal button decoration, it allow to keep a colored border when a button is `disabled` and color is forced to gray by the CSS framework. A multicolor animated background is available under the name: *chameleon*.
+- `stateBar`: (mixed `string`|`false`) is a CSS class to style the state bar. The *State Bar* is an additionnal button decoration, it allow to keep a colored border when a button is `disabled` and color is forced to gray by the CSS framework. A multicolor animated background is available under the name: *msb-anim-chameleon*.
 
 
 Icons animations list:
