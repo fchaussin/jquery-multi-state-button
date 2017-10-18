@@ -82,7 +82,10 @@ License: MIT License (MIT)
 				.addClass(states[state].cssClass)
 				.html(icon)
 				.append(states[state].label)
-				.prop("disabled", states[state].disabled);
+				.prop("disabled", states[state].disabled)
+				.append("<div class='bar'></div>")
+				.find("div.bar")
+				.addClass(states[state].stateBar);
 		}
 	};
 
@@ -108,7 +111,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: false,
-			stateBar: ""
+			stateBar: "blue darken-2"
 		},
 		success: {
 			cssClass: "green",
@@ -118,7 +121,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: true,
-			stateBar: ""
+			stateBar: "green darken-2"
 		},
 		warning: {
 			cssClass: "orange",
@@ -128,7 +131,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: false,
-			stateBar: ""
+			stateBar: "orange darken-2"
 		},
 		error: {
 			cssClass: "red",
@@ -138,7 +141,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: false,
-			stateBar: ""
+			stateBar: "red darken-2"
 		},
 		process: {
 			cssClass: "yellow black-text",
@@ -148,7 +151,8 @@ License: MIT License (MIT)
 				anim: "rotate"
 			},
 			disabled: true,
-			stateBar: ""
+			stateBar: "msb-animbg-chameleon"
 		}
 	};
 })(jQuery, window, document);
+
