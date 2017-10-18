@@ -73,7 +73,7 @@ License: MIT License (MIT)
 				});
 				icon = fa.addClass('fa-' + states[state].icon.name);
 				// now, if state icon anim, adding it
-				if (states[state].icon.anim != false) {
+				if (states[state].icon.anim !== false) {
 					fa.addClass("msb-anim-" + states[state].icon.anim);
 				}
 			}
@@ -82,10 +82,15 @@ License: MIT License (MIT)
 				.addClass(states[state].cssClass)
 				.html(icon)
 				.append(states[state].label)
-				.prop("disabled", states[state].disabled)
-				.append("<div class='bar'></div>")
-				.find("div.bar")
-				.addClass(states[state].stateBar);
+				.prop("disabled", states[state].disabled);
+			if (states[state].stateBar !== false) {
+				el.append("<div class='bar'></div>")
+				if(states[state].stateBar !== ""){
+					el
+						.find("div.bar")
+						.addClass("msb-anim-bg-" + states[state].stateBar);
+				}
+			}
 		}
 	};
 
