@@ -88,7 +88,7 @@ License: MIT License (MIT)
 				if(states[state].stateBar !== ""){
 					el
 						.find("div.bar")
-						.addClass("msb-anim-bg-" + states[state].stateBar);
+						.addClass(states[state].stateBar);
 				}
 			}
 		}
@@ -156,7 +156,7 @@ License: MIT License (MIT)
 				anim: "rotate"
 			},
 			disabled: true,
-			stateBar: "chameleon"
+			stateBar: "msb-anim-chameleon"
 		}
 	};
 })(jQuery, window, document);
