@@ -31,6 +31,7 @@
 		#ff3535 100%
 	);
 	background-size: 200%;
+	background-repeat: repeat-x;
 	animation: msb-anim-pass 1s linear infinite;
 }
 
