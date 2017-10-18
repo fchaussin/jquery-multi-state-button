@@ -116,7 +116,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: false,
-			stateBar: "blue darken-2"
+			stateBar: ""
 		},
 		success: {
 			cssClass: "green",
@@ -126,7 +126,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: true,
-			stateBar: "green darken-2"
+			stateBar: ""
 		},
 		warning: {
 			cssClass: "orange",
@@ -136,7 +136,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: false,
-			stateBar: "orange darken-2"
+			stateBar: ""
 		},
 		error: {
 			cssClass: "red",
@@ -146,7 +146,7 @@ License: MIT License (MIT)
 				anim: false
 			},
 			disabled: false,
-			stateBar: "red darken-2"
+			stateBar: ""
 		},
 		process: {
 			cssClass: "yellow black-text",
