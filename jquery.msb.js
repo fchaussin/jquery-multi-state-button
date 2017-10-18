@@ -156,7 +156,7 @@ License: MIT License (MIT)
 				anim: "rotate"
 			},
 			disabled: true,
-			stateBar: "msb-animbg-chameleon"
+			stateBar: "chameleon"
 		}
 	};
 })(jQuery, window, document);
