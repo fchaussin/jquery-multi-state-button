@@ -164,18 +164,18 @@ The default `options` are:
 		"anim": "rotate"
 	      },
 	      "disabled": true,
-	      "stateBar": "msb-animbg-chameleon"
+	      "stateBar": "chameleon"
 	    }
 	  }
 
 Where:
 
-- `cssClass` is a `CSS class` to style the button (default options are using MaterializeCSS classes)
-- `label` is a `string` to give a label to the button
-- `icon.name` is the *Material Design* icon label ([see Material Icons](https://material.io/icons/)) or the the *Font Awesome* class name without the *fa-* prefixe.
-- `icon.anim` is the *animation class name* (without prefix) to animate the icon, `false` or `empty string` if no animation. Check the animation list and a live demo link below.
-- `disabled` is `true` or `false` to set or not the `disabled attribute` to the `BUTTON markup`, MaterializeCSS will override your `cssClass` colors as it usually do with `disabled elements`. `Disabled` is not working on a `<a> markup` so in this case it will apply the `cssClass` colors.
-- `stateBar` is a CSS class to style the state bar. The *State Bar* is an additionnal button decoration, it allow to keep a colored border when a button is `disabled` and color is forced to gray by the CSS framework. A multicolor animated background is available under the name: `msb-animbg-chameleon`.
+- `cssClass`: (`string`) is a *CSS class* to style the button (default options are using MaterializeCSS classes).
+- `label`: (`string`) is the button's label.
+- `icon.name`: (`string`) is the [*Material Design*](https://material.io/icons/) icon label or the [*Font Awesome*](http://fontawesome.io/icons/) class name without the *fa-* prefixe.
+- `icon.anim`: (mixed `string`|`false`) is the *animation class name* (without prefix) to animate the icon, `false` if no animation. Check the animation list and a live demo link below.
+- `disabled`: (`boolean`) is `true` or `false` to set or not the *disabled attribute* to the *BUTTON markup*, MaterializeCSS will override your `cssClass` colors as it usually do with *disabled elements*. `Disabled` is not working on a *A markup* so in this case it will apply the `cssClass` colors.
+- `stateBar`: (mixed `string`|`false`) is a CSS class to style the state bar. The *State Bar* is an additionnal button decoration, it allow to keep a colored border when a button is `disabled` and color is forced to gray by the CSS framework. A multicolor animated background is available under the name: *chameleon*.
 
 
 Icons animations list:
