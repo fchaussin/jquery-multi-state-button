@@ -84,7 +84,7 @@ License: MIT License (MIT)
 				.append(states[state].label)
 				.prop("disabled", states[state].disabled);
 			if (states[state].stateBar !== false) {
-				el.append("<div class='bar'></div>")
+				el.append("<div class='bar'></div>");
 				if(states[state].stateBar !== ""){
 					el
 						.find("div.bar")
