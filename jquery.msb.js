@@ -61,7 +61,7 @@ License: MIT License (MIT)
 					return (className.match(/(^|\s)msb-anim-\S+/g) || []).join(" ");
 				});
 				// now, if state icon anim, adding it
-				if (states[state].icon.anim != false) {
+				if (states[state].icon.anim !== false || states[state].icon.anim === "") {
 					md.addClass("msb-anim-" + states[state].icon.anim);
 				}
 			} else if (fa.length > 0) {
@@ -73,7 +73,7 @@ License: MIT License (MIT)
 				});
 				icon = fa.addClass('fa-' + states[state].icon.name);
 				// now, if state icon anim, adding it
-				if (states[state].icon.anim !== false) {
+				if (states[state].icon.anim !== false || states[state].icon.anim === "") {
 					fa.addClass("msb-anim-" + states[state].icon.anim);
 				}
 			}
