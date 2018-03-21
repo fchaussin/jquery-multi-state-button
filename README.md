@@ -6,9 +6,10 @@
 
 ### Demo
 
-- See the [jquery.msb.js demo](https://codepen.io/fchaussin/pen/vejWKG) with very basic exemples.
-- Another [demo](https://codepen.io/fchaussin/pen/mBKjzO) in a real life exemple with ajax submiting, states overriding, init callback, state updates, and updates callbacks...
+- See the [jquery.msb.js Getting Started Demo](https://codepen.io/fchaussin/pen/BwMMgm) with very basic exemples.
+- [a real life exemple](https://codepen.io/fchaussin/pen/mBKjzO) with ajax submiting, states overriding, init callback, state updates, and updates callbacks...
 - [Here a generic form demo](https://codepen.io/fchaussin/pen/EwdwRg), where button updates are defined with $.ajaxPrefilter
+- All the CSS provided are for the icons animations [See all icons animations](https://codepen.io/fchaussin/pen/vejWKG) 
 
 ### Features
 
@@ -193,7 +194,7 @@ Icons animations list:
 - tada
 - fly
 
-You can see exemples on this [demo](https://codepen.io/fchaussin/pen/vejWKG) 
+You can all icons animations on this [demo](https://codepen.io/fchaussin/pen/vejWKG) 
 
 ### Coming soon features
 
